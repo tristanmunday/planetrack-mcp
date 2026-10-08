@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.tristanmunday/planetrack",
+  "description": "Live and historical flight data: aircraft near a point, one aircraft's track, past legs of a flight number, on-time reliability for flights, routes and airports (US), and what flew over an address. Free API key at planetrack.ai.",
+  "title": "PlaneTrack flight data",
+  "version": "1.0.0",
+  "websiteUrl": "https://planetrack.ai/docs.html#mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://planetrack.ai/api/analysis/mcp",
+      "headers": [
+        {"name": "X-API-Key", "description": "PlaneTrack API key (free tier: 2,000 credits a month, create one at https://planetrack.ai/dashboard.html)", "isRequired": true, "isSecret": true}
+      ]
+    }
+  ]
+}
